@@ -1,2 +1,56 @@
-# Customs-Declaration-Datasets
-Customs import declaration datasets for customs selection &amp; fraud detection research
+## 세관 수입신고 가상 데이터셋
+
+For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+
+### Data Introduction(데이터 소개 및 목적)
+본 데이터는 세관의 통관 절차 내에서 작성하는 수입 신고서의 항목을 정리한 데이터이다.
+본래 수입신고 데이터는 개인 정보 등을 포함하는 민감한 데이터이기에 외부에 공개하지 않았으나, 아래와 같은 취지로 가상화 버전의 수입 신고 데이터를 제작 및 배포하고자 한다.
+1. 사업자 및 일반인의 수입 통관 신고 절차에 대한 이해를 높이고 용어 등의 지식을 확산시켜 관세사가 아니어도 정확하게 수입 신고를 할 수 있도록 돕고자 한다.
+2. 우범 화물 예측, 품목 분류 등 관세 관련 연구에 활용되어, 실제 세관 업무에 적용할 수 있는 알고리즘의 개발을 기대한다.
+
+### Data Summary(데이터 요약)
+|특성|수치|
+|----|----|
+|데이터 개수|54000|
+|열 개수|21|
+|우범 신고 개수|11569|
+|정상 신고 개수|42431|
+
+세관 수입 신고 데이터셋은 표 형태의 데이터셋으로, 21개의 열로 구성된 54000개의 가상 수입신고 데이터를 담고 있다. 전체 중 약 21.4%의 데이터가 우범여부 라벨이 1로 표시된 우범 항목이다.
+
+### Data Discription(데이터 설명)
+|속성|설명|
+|---|---|
+|신고일자|신고서가 제출된 날짜|
+|신고세관부호|신고한 세관의 부호|
+|수입신고구분코드|일반 및 간이 신고 등 수입 신고의 종류에 대한 부호|
+|수입거래구분코드|수입 거래의 종류 부호|
+|수입종류코드|내수용, 수출용원자재 등 수입 용도에 관한 부호|
+|징수형태코드|징수의 종류에 따른 부호|  
+|운송수단유형코드|운송수단 및 운송용기에 대한 부호|
+|신고인부호|신고인 상호와 성명에 따른 부호|
+|수입자|수입자의 통관고유부호|
+|해외거래처부호|해외거래처의 상호 부호|
+|특송업체부호|특송 방법 및 특송 업체의 부호|
+|HS10단위부호|10자리 물품 분류 부호|
+|적출국가코드|신고물품의 해외선적국가 부호|
+|원산지국가코드|원산지 국가의 부호|
+|관세율|해당 품목의 세율(%)|
+|관세율구분코드|해당 품목의 세율에 따른 구분 부호|
+|원산지표시유무코드|원산지 표시 유무 및 표시면제사유에 따른 부호|
+|신고중량|포장용기를 제외한 물품 중량(KG)|
+|과세가격원화금액|구매자가 실제로 지급한 금액(원)|
+|우범여부|우범 화물 여부|
+|핵심적발|우범 항목 중 가중치가 높은 우범 여부|
+
+<!-- Customs declaration dataset contains 54000 customs declaration. Each row has 22 columns, each indicating important attributes that can  -->
+세관 수입 신고 데이터셋은 54000개의 수입 신고로 구성되어있다. 수입신고서에 기입하는 62가지의 항목 중 화물의 특성을 잘 나타내거나 우범 선별 업무에 중요한 역할을 하는 19가지의 속성과, 2가지의 우범 여부 라벨을 포함하고 있다. 각 행은 신고일자별로 정렬되어있으며, 각 열의 의미는 위 표에 설명되어있다. 
+
+### Data Generation(데이터 생성 과정)
+본 데이터셋은 CTGAN(Conditional Tabular GAN)이라고 불리는 적대적 생성 신경망을 이용하여 생성되었으며, 실제 세관 수입 신고 데이터셋과 동일한 분포를 가지는 가상 데이터이다.
+
+원본 데이터는 관세청에서 수입통관신고를 한 화물 중 실제로 검사를 한 화물의 정보 및 우범 여부에 대한 데이터이다. 우선 원본 데이터에 익명화 작업을 거친 후, 54000개의 행을 무작위로 샘플링하였다. 이러한 과정으로 익명화된 원본 데이터와 같은 분포를 가지는 데이터를 생성하였다.
+<!-- 관세당국 인력의 한계 때문에 일부 화물만 검사할 수 밖에 없다. 이때, 경험적 규칙 기반으로 의심스러운 화물을 우선적으로 검사하게 된다. -->
+
+### Support or Contact
+Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
