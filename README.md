@@ -1,7 +1,5 @@
 ## 세관 수입신고 가상 데이터셋
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
 ### Data Introduction(데이터 소개 및 목적)
 본 데이터는 세관의 통관 절차 내에서 작성하는 수입 신고서의 항목을 정리한 데이터이다.
 본래 수입신고 데이터는 개인 정보 등을 포함하는 민감한 데이터이기에 외부에 공개하지 않았으나, 아래와 같은 취지로 가상화 버전의 수입 신고 데이터를 제작 및 배포하고자 한다.
