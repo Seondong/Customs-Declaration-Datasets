@@ -1,0 +1,8 @@
+﻿===<파일설명>===================================
+
+00~18_Syn_CTGAN.ipynb ==> 가상데이터 생성과정
+19_Orgn_merge.ipynb / 19_Syn_merge.ipynb ==> result_org/result_syn 폴더생성(데이터 합치기)
+20_Syn_Org_Compare_data.ipynb ==> 원본/가상 데이터 성능비교
+
+30~31 : 데이터성능비교(가상데이터)
+50: 다양한 알고리즘을 활용한 데이터 성능비교
