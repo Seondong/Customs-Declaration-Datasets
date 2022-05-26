@@ -57,5 +57,6 @@
 ### Contact
 
 데이터에 관한 질문이 있으시다면 연락 부탁드립니다. 
-* 관세청 박재우 <jaeus@korea.kr>
-* 기초과학연구원 김선동 <sundong@ibs.re.kr> 
+* 카이스트 정채윤, <lily9991@kaist.ac.kr>
+* 기초과학연구원 김선동, <sundong@ibs.re.kr> 
+* 관세청 박재우, <jaeus@korea.kr>
