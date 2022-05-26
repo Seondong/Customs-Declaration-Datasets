@@ -52,6 +52,6 @@ For customs fraud detection, we split the data into three pieces. The first 12-m
 
 
 ### Contact
-* Chaeyoon Jeong, KAIST <lily9991@kaist.ac.kr>
-* Sundong Kim, Institute for Basic Science <sundong@ibs.re.kr> 
-* Jaewoo Park, Korea Customs Service <jaeus@korea.kr>
+* Chaeyoon Jeong, KAIST, <lily9991@kaist.ac.kr>
+* Sundong Kim, Institute for Basic Science, <sundong@ibs.re.kr> 
+* Jaewoo Park, Korea Customs Service, <jaeus@korea.kr>
