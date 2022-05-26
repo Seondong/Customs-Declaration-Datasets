@@ -1,61 +1,57 @@
 ﻿## Customs Import Declaration Datasets [[English]](https://github.com/Seondong/Customs-Declaration-Datasets/tree/en) [[Korean]](https://github.com/Seondong/Customs-Declaration-Datasets/tree/main)
 
-관세 행정 분야의 도메인 지식을 확산시키고, 우범 화물 선별, 품목 분류 및 관계성 예측 등 관세 분야의 연구 저변을 넓히기 위한 취지로, 가상화된 일반통관 수입신고서 데이터셋을 제작 및 배포한다. 적대적 생성 신경망을 이용해 만들어진 데이터셋은 54,000건으로 21개의 속성을 가진 [수입 신고서](./수입신고서.pdf) 형태로 이루어져 있으며, 속성값의 분포, 관계성 측면에서 실 데이터셋과 상당히 유사하다. 데이터를 구축하는 과정에서 원 데이터에 존재하는 속성 간의 의존성 및 경향성을 유지하기 위하여 활용한 방법 등 자세한 내용은 논문: [가상화된 관세청 수입신고 데이터셋 소개](./paper.pdf)에 소개되어 있다.
+Given the huge volume of cross-border flows, effective controlling of trades becomes more crucial in customs administrations. However, limited accessibility of the customs datasets hinders the progress of open research and lots of member countries have not benefited from the recent progress. We introduce an [import declarations dataset](./data/df_syn.csv) to facilitate the collaboration between the domain experts in customs administrations and data science researchers. The dataset contains 54,000 artificially generated trades with 21 key attributes and it is synthesized with CTGAN while maintaining correlated attributes. The fabrication step minimizes the possible identity risk which may exist in trade statistics and the published data follow a similar distribution to the source data so that it can be used in various downstream tasks. See our paper: [Customs Import Declaration Datasets](./paper.pdf) for more details.
 
+### Data Schema
+Among 24.7 million customs declarations reported for 18 months between January 1, 2020 and June 30, 2021, we used the inspected
+(i.e., labeled) part of the declarations to synthesize [this dataset](./data/df_syn.csv). Each row describes the report of a single goods. Among 62 attributes in the [import declaration form](./수입신고서.pdf), the data includes 21 representative
+attributes including two labels, fraud and critical fraud. Detailed data descriptions are as follows.
 
-
-### 데이터 구성
-[전체 데이터](./data/df_syn.csv)는 2020년 1월부터 2021년 6월까지, 총 18개월에 걸쳐 수집된 54,000건의 가상 수입 신고 건으로, 각 건은 물품의 수입 신고 내용을 모사한다. 수입신고서에 기재하는 62가지의 속성 중 업무적으로 가장 중요한 19개의 속성과 물품의 우범 여부를 나타내는 2개의 라벨을 포함하고 있다. 각 행은 신고 일자별로 정렬되어있으며, 각 속성의 의미는 다음과 같다. 
-
-| 속성               | 설명                                              |
+| Attribute               | Description                                              |
 | ------------------ | ------------------------------------------------- |
-| 신고일자           | 신고서가 제출된 날짜                              |
-| 신고세관부호       | 신고한 세관의 부호                                |
-| 수입신고구분코드   | 일반 및 간이 신고 등 수입 신고의 종류에 대한 부호 |
-| 수입거래구분코드   | 수입 거래의 종류 부호                             |
-| 수입종류코드       | 내수용, 수출용원자재 등 수입 용도에 관한 부호     |
-| 징수형태코드       | 징수의 종류에 따른 부호                           |
-| 운송수단유형코드   | 운송수단 및 운송용기에 대한 부호                  |
-| 신고인부호         | 신고인 상호와 성명에 따른 부호                    |
-| 수입자             | 수입자의 통관고유부호                             |
-| 해외거래처부호     | 해외거래처의 상호 부호                            |
-| 특송업체부호       | 특송 방법 및 특송 업체의 부호                     |
-| HS10단위부호       | 10자리 물품 분류 부호                             |
-| 적출국가코드       | 신고물품의 해외선적국가 부호                      |
-| 원산지국가코드     | 원산지 국가의 부호                                |
-| 관세율             | 해당 품목의 세율(%)                               |
-| 관세율구분코드     | 해당 품목의 세율에 따른 구분 부호                 |
-| 원산지표시유무코드 | 원산지 표시 유무 및 표시면제사유에 따른 부호      |
-| 신고중량           | 포장용기를 제외한 물품 중량(KG)                   |
-| 과세가격원화금액   | 구매자가 실제로 지급한 금액(원)                   |
-| 우범여부           | 우범 화물 여부                                    |
-| 핵심적발           | 우범 항목 중 가중치가 높은 우범 여부              |
+| Date           | Date when the declaration is reported                           |
+| Office ID       | Customs office that receives the declaration (e.g., Seoul regional customs)                               |
+| Process type | Type of the declaration process (e.g., Paperless declaration) |
+| Import type | Code for import type (e.g., OEM import, E-commerce)                         |
+| Import use | Code for import use (e.g., Raw materials for domestic consumption)     |
+| Payment type | Distinguish tariff payment type (e.g., Usance credit payable at sight)                        |
+| Mode of transport | Nine modes of transport (e.g., maritime, rail, air)              |
+| Declarant ID | Person who declares the item                  |
+| Importer ID | Consumer who imports the item                             |
+| Seller ID | Overseas business partner which supplies goods to Korea                           |
+| Courier ID | Delivery service provider (e.g., DHL, FedEx)                     |
+| HS10 code | 10-digit product code (e.g., 090121xxxx = Coffee, Roasted, Not Decaffeinated)                             |
+| Country of departure | Country from which a shipment has or is scheduled to depart             |
+| Country of origin | Country of manufacture, production or design, or where an article or product comes from                            |
+| Tax rate | Tax rate of the item (%)                              |
+| Tax type | Tax types (e.g., FTA Preferential rate)               |
+| Country of origin indicator | Way of indicating the country of origin (e.g., Mark on package)      |
+| Net mass | Mass without any packaging (kg)                  |
+| Item price | Assessed value of an item (KRW)                   |
+| Fraud | Fraudulent attempt to reduce the customs duty (0/1)                                    |
+| Crifical fraud | Critical case which may threaten the public safety (0/1)             |
 
-참고 자료:
-
-* [수입 신고 항목정의서](./항목정의서.xlsx)
-* [무역통계부호](https://www.data.go.kr/data/3040477/fileData.do) 
+References:
+* [Trade Code Handbook (Korean)](https://www.data.go.kr/data/3040477/fileData.do) 
 
 
+### Data Generation
 
-### 생성 방법
+Among 24.7 million customs declarations reported for 18 months between January 1, 2020 and June 30, 2021, we used the inspected
+(i.e., labeled) part of the declarations to synthesize the data. We used conditional tabular GAN (CTGAN) from the Synthetic
+Data Vault library. Identifiable information in the source data are anonymized. To make it more realistic, correlated attributes and their values are maintained during the generation process. 
 
-본 데이터셋은 적대적 생성 신경망 CTGAN(Conditional Tabular GAN)을 이용하여 생성되었으며, 실제 세관 수입 신고 데이터셋과 유사한 분포를 가진다. 데이터 제작을 위하여 관세청에 최근 18개월간 신고된 일반 통관 수입신고건 중 검사 선별이 진행된 데이터를 활용하였으며, 데이터의 모든 개인 정보는 제외되거나 익명화되었다. 수입신고 데이터의 특성상 속성 간 관계성이 존재하며, 가상화를 하는 과정에서도 관계성이 유지될 수 있게 처리하였다. 
-
-[데이터 생성 과정을 담은 코드](./codes/CTGAN을_활용한_데이터_생성.ipynb) 
+[Code: Data generation with CTGAN](./codes/CTGAN을_활용한_데이터_생성.ipynb) 
 
 
+### Area of Research
 
-### 활용 방안
+This dataset can be used for various data science problems in customs such as customs fraud detection, HS code classification, and trade pattern analysis. 
 
-본 데이터에 존재하는 우범여부/핵심적발을 타겟 변수로 하여 통관 시스템의 효율화를 위한 우범 선별 문제를 접근할 수 있다. 우범선별 알고리즘 개발 및 데이터를 활용하는 방법은 [논문](https://github.com/Seondong/Customs-Declaration-Datasets/blob/main/paper.pdf)의 4장에서 확인할 수 있다. 이외에도 HS6단위를 부호를 예측하는 품목 분류 문제나 코드별 무역 패턴 분석, 수입자-신고인-거래처 간의 상관관계분석 등 다양한 관세 행정 문제에 벤치마크 데이터로 활용될 수 있을 거라 기대한다. 
-
-편의를 위해 첫 12개월 분의 데이터를 [학습 데이터](./data/df_syn_train.csv)로, 다음 3개월 분의 데이터를 [검증 데이터](./data/df_syn_valid.csv)로, 마지막 3개월 분의 데이터를 성능 평가를 위한  [테스트 데이터](./data/df_syn_test.csv)로 활용할 수 있게 분리해 두었다. 본 데이터를 활용한 우범 선별 알고리즘은 [여기서](./codes/우범선별/) 확인할 수 있다. 
-
+For customs fraud detection, we split the data into three pieces. The first 12-month as the [training set](./data/df_syn_train.csv), the next three month as the [validation set](./data/df_syn_valid.csv), and the last three month as the [test set](./data/df_syn_test.csv). Baseline codes can be found [here](./codes/우범선별/).
 
 
 ### Contact
-
-데이터에 관한 질문이 있으시다면 연락 부탁드립니다. 
-* 관세청 박재우 <jaeus@korea.kr>
-* 기초과학연구원 김선동 <sundong@ibs.re.kr> 
+* Chaeyoon Jeong, KAIST <lily9991@kaist.ac.kr>
+* Sundong Kim, Institute for Basic Science <sundong@ibs.re.kr> 
+* Jaewoo Park, Korea Customs Service <jaeus@korea.kr>
