@@ -1,4 +1,4 @@
-﻿## Customs Import Declaration Datasets [[English]](.) [[Korean]](.)
+﻿## Customs Import Declaration Datasets [[English]](https://github.com/Seondong/Customs-Declaration-Datasets/tree/en) [[Korean]](https://github.com/Seondong/Customs-Declaration-Datasets/tree/main)
 
 관세 행정 분야의 도메인 지식을 확산시키고, 우범 화물 선별, 품목 분류 및 관계성 예측 등 관세 분야의 연구 저변을 넓히기 위한 취지로, 가상화된 일반통관 수입신고서 데이터셋을 제작 및 배포한다. 적대적 생성 신경망을 이용해 만들어진 데이터셋은 54,000건으로 21개의 속성을 가진 [수입 신고서](./수입신고서.pdf) 형태로 이루어져 있으며, 속성값의 분포, 관계성 측면에서 실 데이터셋과 상당히 유사하다. 데이터를 구축하는 과정에서 원 데이터에 존재하는 속성 간의 의존성 및 경향성을 유지하기 위하여 활용한 방법 등 자세한 내용은 논문: [가상화된 관세청 수입신고 데이터셋 소개](./paper.pdf)에 소개되어 있다.
 
