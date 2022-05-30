@@ -30,6 +30,7 @@ attributes including two labels, fraud and critical fraud. Detailed data descrip
 | Item price | Assessed value of an item (KRW)                   |
 | Fraud | Fraudulent attempt to reduce the customs duty (0/1)                                    |
 | Crifical fraud | Critical case which may threaten the public safety (0/1)             |
+![Import Declaration Form](./import_declaration_form.JPG)
 
 References:
 * [Trade Code Handbook (Korean)](./trade_code_handbook.pdf) 
