@@ -1,14 +1,15 @@
 ﻿## Customs Import Declaration Datasets [[English]](https://github.com/Seondong/Customs-Declaration-Datasets/tree/en) [[Korean]](https://github.com/Seondong/Customs-Declaration-Datasets/tree/main)
 
-Given the huge volume of cross-border flows, effective control of trades becomes more crucial in customs administrations. However, limited accessibility of the customs datasets hinders the progress of open research and lots of member countries have not benefited from the recent progress. We introduce an [import declarations dataset](./data/df_syn_eng.csv) to facilitate the collaboration between the domain experts in customs administrations and data science researchers. The dataset contains 54,000 artificially generated trades with 21 key attributes and it is synthesized with CTGAN while maintaining correlated attributes. The fabrication step minimizes the possible identity risk which may exist in trade statistics and the published data follow a similar distribution to the source data so that it can be used in various downstream tasks. See our paper: [Customs Import Declaration Datasets](./resources/paper.pdf) for more details.
+Given the huge volume of cross-border flows, effective control of trades becomes more crucial in customs administrations. However, limited accessibility of the customs datasets hinders the progress of open research and lots of member countries have not benefited from the recent progress. We introduce an [import declarations dataset](./data/df_syn_eng.csv) to facilitate the collaboration between the domain experts in customs administrations and data science researchers. The dataset contains 54,000 artificially generated trades with 22 key attributes and it is synthesized with CTGAN while maintaining correlated attributes. The fabrication step minimizes the possible identity risk which may exist in trade statistics and the published data follow a similar distribution to the source data so that it can be used in various downstream tasks. See our paper: [Customs Import Declaration Datasets](./resources/paper.pdf) for more details.
 
 ### Data Schema
 Among 24.7 million customs declarations reported for 18 months between January 1, 2020 and June 30, 2021, we used the inspected
-(i.e., labeled) part of the declarations to synthesize [this dataset](./data/df_syn_eng.csv). Each row describes the report of a single goods. Among 62 attributes in the [import declaration form](./resources/import_declaration_form.pdf), the data includes 21 representative
+(i.e., labeled) part of the declarations to synthesize [this dataset](./data/df_syn_eng.csv). Each row describes the report of a single goods. Among 62 attributes in the [import declaration form](./resources/import_declaration_form.pdf), the data includes 22 representative
 attributes including two labels, fraud and critical fraud. Detailed data descriptions are as follows.
 
 | Attribute               | Description                                              |
 | ------------------ | ------------------------------------------------- |
+| Declaration ID           | Primary key of the record                           |
 | Date           | Date when the declaration is reported                           |
 | Office ID       | Customs office that receives the declaration (e.g., Seoul regional customs)                               |
 | Process type | Type of the declaration process (e.g., Paperless declaration) |
