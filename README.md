@@ -7,6 +7,8 @@ Among 24.7 million customs declarations reported for 18 months between January 1
 (i.e., labeled) part of the declarations to synthesize [this dataset](./data/df_syn_eng.csv). Each row describes the report of a single goods. Among 62 attributes in the [import declaration form](./resources/import_declaration_form.pdf), the data includes 22 representative
 attributes including two labels, fraud and critical fraud. Detailed data descriptions are as follows.
 
+[Code: In-Depth Exploratory Data Analysis](./codes/EDA.ipynb) 
+
 | Attribute               | Description                                              |
 | ------------------ | ------------------------------------------------- |
 | Declaration ID           | Primary key of the record                           |
