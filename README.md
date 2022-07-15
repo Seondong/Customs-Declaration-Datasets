@@ -35,6 +35,7 @@ attributes including two labels, fraud and critical fraud. Detailed data descrip
 | Crifical fraud | Critical case which may threaten the public safety (0/1)             |
 
 ![Import Declaration Form](./resources/import_declaration_form.JPG)
+![Distribution](./resources/dist.JPG)
 
 References:
 * [Trade Code Handbook (Korean)](./resources/trade_code_handbook.pdf) 
