@@ -56,7 +56,7 @@
 
 
 ### 인용
-본 데이터를 연구에 활용하신 경우, 데이터의 명세가 담긴 아래 논문을 인용해 주시기 바랍니다:
+본 데이터를 연구에 활용하신 경우, 데이터의 명세가 담긴 아래 논문을 인용해 주시기 바랍니다 [[영문 PDF]](https://arxiv.org/abs/2208.02484) [[국문 PDF]](./resources/paper_ko.pdf):
 ```LaTeX
 @misc{customs_data_2022,
   title={{Customs Import Declaration Datasets}},
