@@ -57,7 +57,7 @@ This dataset can be used for various data science problems in customs such as cu
 For customs fraud detection, we split the data into three pieces. The first 12-month as the [training set](./data/df_syn_train_eng.csv), the next three months as the [validation set](./data/df_syn_valid_eng.csv), and the last three months as the [test set](./data/df_syn_test_eng.csv). Baseline codes can be found [here](./codes/fraud_detection/).
 
 ### Citation
-If you find this code useful, please cite the original paper:
+If you find this dataset useful, please cite the original paper:
 ```LaTeX
 @misc{customs_data_2022,
   title={{Customs Import Declaration Datasets}},
