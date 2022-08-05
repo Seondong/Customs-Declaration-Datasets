@@ -55,6 +55,17 @@
 편의를 위해 첫 12개월 분의 데이터를 [학습 데이터](./data/df_syn_train.csv)로, 다음 3개월 분의 데이터를 [검증 데이터](./data/df_syn_valid.csv)로, 마지막 3개월 분의 데이터를 성능 평가를 위한  [테스트 데이터](./data/df_syn_test.csv)로 활용할 수 있게 분리해 두었다. 본 데이터를 활용한 우범 선별 알고리즘은 [여기서](./codes/우범선별/) 확인할 수 있다. 
 
 
+### 인용
+본 데이터를 연구에 활용하신 경우, 데이터의 명세가 담긴 아래 논문을 인용해 주시기 바랍니다:
+```LaTeX
+@misc{customs_data_2022,
+  title={{Customs Import Declaration Datasets}},
+  author={Chaeyoon Jeong and Sundong Kim and Jaewoo park and Yeonsoo Choi},
+  eprint={arXiv:2208.02484},
+  archivePrefix={arXiv}
+}
+```
+
 
 ### Contact
 
