@@ -70,7 +70,7 @@ If you find this dataset useful, please cite the original paper [[PDF]](https://
 
 ### Contact
 * Chaeyoon Jeong, KAIST, <lily9991@kaist.ac.kr>
-* Sundong Kim, Institute for Basic Science, <sundong@gist.ac.kr> 
+* Sundong Kim, GIST, <sundong@gist.ac.kr> 
 * Jaewoo Park, Korea Customs Service, <jaeus@korea.kr>
 
 
