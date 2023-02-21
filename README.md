@@ -23,7 +23,7 @@ attributes including two labels, fraud and critical fraud. Detailed data descrip
 | Importer ID | Consumer who imports the item                             |
 | Seller ID | Overseas business partner which supplies goods to Korea                           |
 | Courier ID | Delivery service provider (e.g., DHL, FedEx)                     |
-| HS6 code | 6-digit product code (e.g., 090121xxxx = Coffee, Roasted, Not Decaffeinated)                             |
+| HS6 code | 6-digit product code (e.g., 090121 = Coffee, Roasted, Not Decaffeinated)                             |
 | Country of departure | Country from which a shipment has or is scheduled to depart             |
 | Country of origin | Country of manufacture, production or design, or where an article or product comes from                            |
 | Tax rate | Tax rate of the item (%)                              |
