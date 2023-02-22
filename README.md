@@ -23,7 +23,7 @@ attributes including two labels, fraud and critical fraud. Detailed data descrip
 | Importer ID | Consumer who imports the item                             |
 | Seller ID | Overseas business partner which supplies goods to Korea                           |
 | Courier ID | Delivery service provider (e.g., DHL, FedEx)                     |
-| HS10 code | 10-digit product code (e.g., 090121xxxx = Coffee, Roasted, Not Decaffeinated)                             |
+| HS6 code | 6-digit product code (e.g., 090121 = Coffee, Roasted, Not Decaffeinated)                             |
 | Country of departure | Country from which a shipment has or is scheduled to depart             |
 | Country of origin | Country of manufacture, production or design, or where an article or product comes from                            |
 | Tax rate | Tax rate of the item (%)                              |
@@ -31,8 +31,8 @@ attributes including two labels, fraud and critical fraud. Detailed data descrip
 | Country of origin indicator | Way of indicating the country of origin (e.g., Mark on package)      |
 | Net mass | Mass without any packaging (kg)                  |
 | Item price | Assessed value of an item (KRW)                   |
-| Fraud | Fraudulent attempt to reduce the customs duty (0/1)                                    |
-| Crifical fraud | Critical case which may threaten the public safety (0/1)             |
+| Fraud | Fraudulent attempt to reduce the customs duty (0/1), 0=non-fraud, 1=fraud                                    |
+| Crifical fraud | Critical case which may threaten the public safety (0/1/2), 0=non-fraud, 1=fraud, 2=critical fraud               |
 
 ![Import Declaration Form](./resources/import_declaration_form.JPG)
 ![Distribution](./resources/dist.JPG)
