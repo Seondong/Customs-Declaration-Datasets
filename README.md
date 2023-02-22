@@ -31,8 +31,8 @@ attributes including two labels, fraud and critical fraud. Detailed data descrip
 | Country of origin indicator | Way of indicating the country of origin (e.g., Mark on package)      |
 | Net mass | Mass without any packaging (kg)                  |
 | Item price | Assessed value of an item (KRW)                   |
-| Fraud | Fraudulent attempt to reduce the customs duty (0/1)                                    |
-| Crifical fraud | Critical case which may threaten the public safety (0/1)             |
+| Fraud | Fraudulent attempt to reduce the customs duty (0/1), 0=non-fraud, 1=fraud                                    |
+| Crifical fraud | Critical case which may threaten the public safety (0/1/2), 0=non-fraud, 1=fraud, 2=critical fraud               |
 
 ![Import Declaration Form](./resources/import_declaration_form.JPG)
 ![Distribution](./resources/dist.JPG)
