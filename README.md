@@ -1,6 +1,6 @@
 ﻿## Customs Import Declaration Datasets [[English]](https://github.com/Seondong/Customs-Declaration-Datasets/tree/en) [[Korean]](https://github.com/Seondong/Customs-Declaration-Datasets/tree/main)
 
-Given the huge volume of cross-border flows, effective control of trades becomes more crucial in customs administrations. However, limited accessibility of the customs datasets hinders the progress of open research and lots of member countries have not benefited from the recent progress. We introduce an [import declarations dataset](./data/df_syn_eng.csv) to facilitate the collaboration between the domain experts in customs administrations and data science researchers. The dataset contains 54,000 artificially generated trades with 22 key attributes and it is synthesized with CTGAN while maintaining correlated attributes. The fabrication step minimizes the possible identity risk which may exist in trade statistics and the published data follow a similar distribution to the source data so that it can be used in various downstream tasks. See our paper: [Customs Import Declaration Datasets](https://arxiv.org/abs/2208.02484) for more details.
+Given the huge volume of cross-border flows, effective control of trades becomes more crucial in customs administrations. However, limited accessibility of the customs datasets hinders the progress of open research and lots of member countries have not benefited from the recent progress. We introduce an [import declarations dataset](./data/df_syn_eng.csv) to facilitate the collaboration between the domain experts in customs administrations and data science researchers. The dataset contains 54,000 artificially generated trades with 22 key attributes and it is synthesized with CTGAN while maintaining correlated attributes. The fabrication step minimizes the possible identity risk which may exist in trade statistics and the published data follow a similar distribution to the source data so that it can be used in various downstream tasks.
 
 ### Data Schema
 Among 24.7 million customs declarations reported for 18 months between January 1, 2020 and June 30, 2021, we used the inspected
@@ -55,22 +55,4 @@ Data Vault library. Identifiable information in the source data is anonymized. T
 This dataset can be used for various data science problems in customs such as customs fraud detection, HS code classification, and trade pattern analysis. 
 
 For customs fraud detection, we split the data into three pieces. The first 12-month as the [training set](./data/df_syn_train_eng.csv), the next three months as the [validation set](./data/df_syn_valid_eng.csv), and the last three months as the [test set](./data/df_syn_test_eng.csv). Baseline codes can be found [here](./codes/fraud_detection/).
-
-### Citation
-If you find this dataset useful, please cite the original paper [[PDF]](https://arxiv.org/abs/2208.02484):
-```LaTeX
-@misc{customs_data_2022,
-  title={{Customs Import Declaration Datasets}},
-  author={Chaeyoon Jeong and Sundong Kim and Jaewoo park and Yeonsoo Choi},
-  eprint={arXiv:2208.02484},
-  archivePrefix={arXiv}
-}
-```
-
-
-### Contact
-* Chaeyoon Jeong, KAIST, <lily9991@kaist.ac.kr>
-* Sundong Kim, GIST, <sundong@gist.ac.kr> 
-* Jaewoo Park, Korea Customs Service, <jaeus@korea.kr>
-
 
