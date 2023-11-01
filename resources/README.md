@@ -50,4 +50,4 @@ Data Vault library. Identifiable information in the source data is anonymized. T
 
 This dataset can be used for various data science problems in customs such as customs fraud detection, HS code classification, and trade pattern analysis. 
 
-For customs fraud detection, we split the data into three pieces. The first 12 months as the [training set](./data/df_syn_train_eng.csv), the next three months as the [validation set](./data/df_syn_valid_eng.csv), and the last three months as the [test set](./data/df_syn_test_eng.csv). Baseline codes can be found [here](./codes/fraud_detection/).
+For customs fraud detection, we split the data into three pieces. The first 12 months as the [training set](../data/df_syn_train_eng.csv), the next three months as the [validation set](../data/df_syn_valid_eng.csv), and the last three months as the [test set](../data/df_syn_test_eng.csv). Baseline codes can be found [here](../codes/fraud_detection/).
