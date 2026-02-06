@@ -71,5 +71,6 @@
 
 데이터에 관한 질문이 있으시다면 연락 부탁드립니다. 
 * 카이스트 정채윤, <lily9991@kaist.ac.kr>
-* 기초과학연구원 김선동, <sundong@ibs.re.kr> 
+* 지스트 김선동, <sdkim0211@gmail.com> 
 * 관세청 박재우, <jaeus@korea.kr>
+* 관세청 최연수, <yschoi0817@korea.kr>
