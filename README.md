@@ -72,5 +72,5 @@ If you find this dataset useful, please cite the original paper [[PDF]](https://
 * Chaeyoon Jeong, KAIST, <lily9991@kaist.ac.kr>
 * Sundong Kim, GIST, <sundong@gist.ac.kr> 
 * Jaewoo Park, Korea Customs Service, <jaeus@korea.kr>
-
+* Yeonsoo Choi, Korea Customs Service, <yschoi0817@korea.kr>
 
